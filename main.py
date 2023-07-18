@@ -10,7 +10,8 @@ import os
 load_dotenv()
 
 loader = GoogleDriveLoader(
-    folder_id=os.environ["GOOGLE_DRIVE_FOLDER_ID"],
+    folder_id=os.environ['GOOGLE_DRIVE_FOLDER_ID'],
+    service_account_key='credentials.json',
     recursive=False
 )
 docs = loader.load()
